@@ -1,0 +1,58 @@
+#ellak-newsbar-cont {
+	width: 100%;
+	font-family: 'Verdana', 'Arial', sans;
+	font-size: 11px;
+	background: url('img/bg.gif') repeat-x;
+	padding: 7px 0;
+}
+
+#ellak-newsbar-cont a {
+	color: #fff;
+	text-decoration: none;
+}
+#ellak-newsbar-cont a:hover {
+	text-decoration: underline;
+}
+
+#ellak-newsbar {
+	width: 956px;
+	margin: 0 auto;
+}
+
+#ellak-newsbar:before,
+#ellak-newsbar:after {
+	content: " ";
+	display: table;
+}
+
+#ellak-newsbar:after {
+	clear: both;
+}
+
+#ellak-friendfeed {
+	float: left;
+	width: 350px;
+	padding-top: 5px;
+}
+
+#ellak-sites {
+	float: right;
+	width: 570px;
+}
+
+#ellak-sites a {
+	font-weight: bold;
+}
+
+#ellak-sites select {
+	font-size: 11px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 2px;
+	background: #fff;
+	cursor: default;
+}
+
+.sep {
+	color: #fff;
+}
