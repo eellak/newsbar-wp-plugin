@@ -7,4 +7,4 @@ To use it add:
 
     <?php ellak_newsbar(); ?>
 
-in header.php right after the &lt;body&gt; tag.
+in header.php right after the <body> tag.
