@@ -81,21 +81,21 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 					<select onchange="if(this.value) window.location.href=this.value">
 						<option value="">Δικτυακοί τόποι</option>
 
-						<option value="http://planet.ellak.gr">πλανήτης ελλ.κοινότητας ΕΛ/ΛΑΚ</option>
-						<option value="http://www.ellak.gr/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA/">Blogs Ομάδων Εργασίας</option>
+						<option value="https://planet.ellak.gr">πλανήτης ελλ.κοινότητας ΕΛ/ΛΑΚ</option>
+						<option value="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/">Blogs Ομάδων Εργασίας</option>
 						<option value="http://repository.ellak.gr">Αποθετήριο ΕΛ/ΛΑΚ</option>
-						<option value="http://www.ellak.gr/%CE%B7%CE%BC%CE%AD%CF%81%CE%B5%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">Ημέρες Συνεργασίας</option>
-						<option value="http://advisory.ellak.gr/">Διαβουλεύσεις</option>
-						<option value="http://conferences.ellak.gr/">Εκδηλώσεις</option>
-						<option value="http://ellak.gr/edu">Εκπαίδευση</option>
-						<option value="http://mathe.ellak.gr">mathe.ΕΛΛΑΚ</option>
-						<option value="http://elearn.ellak.gr/">Εκπαιδευτικό Υλικό</option>
+						<option value="https://ellak.gr/%CE%B7%CE%BC%CE%AD%CF%81%CE%B5%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">Ημέρες Συνεργασίας</option>
+						<option value="https://advisory.ellak.gr/">Διαβουλεύσεις</option>
+						<option value="https://conferences.ellak.gr/">Εκδηλώσεις</option>
+						<option value="https://ellak.gr/edu">Εκπαίδευση</option>
+						<option value="https://mathe.ellak.gr">mathe.ΕΛΛΑΚ</option>
+						<option value="https://elearn.ellak.gr/">Εκπαιδευτικό Υλικό</option>
 						<option value="http://openwifi.gr">OpenWifi</option>
-						<option value="http://meetings.ellak.gr">Τηλεδιασκέψεις</option>
-						<option value="https://team.eellak.gr/">Διαχείριση έργων</option>
+						<option value="https://meetings.ellak.gr">Τηλεδιασκέψεις</option>
+						<option value="https://team.ellak.gr/">Διαχείριση έργων</option>
 						<option value="https://github.com/eellak">Έργα στο GiHub</option>
-						<option value="http://ebook.ellak.gr">ebook Reader</option>
-						<option value="http://meetings.ellak.gr/">Πλατφόρμα τηλεδιασκέψεων</option>
+						<option value="https://ebook.ellak.gr">ebook Reader</option>
+						<option value="https://meetings.ellak.gr/">Πλατφόρμα τηλεδιασκέψεων</option>
 					</select>
 				</div><!-- #ellak-sites -->
 			</div><!-- #ellak-newsbar -->
