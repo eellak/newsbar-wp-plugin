@@ -91,11 +91,10 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 						<option value="https://mathe.ellak.gr">mathe.ΕΛΛΑΚ</option>
 						<option value="https://elearn.ellak.gr/">Εκπαιδευτικό Υλικό</option>
 						<option value="http://openwifi.gr">OpenWifi</option>
-						<option value="https://meetings.ellak.gr">Τηλεδιασκέψεις</option>
 						<option value="https://team.ellak.gr/">Διαχείριση έργων</option>
 						<option value="https://github.com/eellak">Έργα στο GiHub</option>
-						<option value="https://ebook.ellak.gr">ebook Reader</option>
-						<option value="https://meetings.ellak.gr/">Πλατφόρμα τηλεδιασκέψεων</option>
+						<option value="http://ebook.ellak.gr">ebook Reader</option>
+						<option value="http://meetings.ellak.gr/">Πλατφόρμα τηλεδιασκέψεων</option>
 					</select>
 				</div><!-- #ellak-sites -->
 			</div><!-- #ellak-newsbar -->
