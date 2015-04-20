@@ -38,7 +38,7 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 
 		// Ellak Friendfeed url
 		$ellak_feed = fetch_feed(
-			'http://feeds.feedburner.com/Friendfeed-Ellak' );
+			'https://planet.ellak.gr/atom.xml' );
 
 		if( ! is_wp_error( $ellak_feed ) ) {
 			/* get the items and randomize their order */
@@ -50,32 +50,32 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 			// get the url & the title of the first object..
 			foreach( $rss_items as $rss_item ) {
 				$url = esc_url( $rss_item->get_permalink() );
-				$title = $rss_item->get_title(); 
+				$title = $rss_item->get_title();
 
 				// ..and stop the loop
 				break;
 			}
 
-			// trim the title to 70 characters (with words only)
-			if( strlen( $title ) > 70 ) {
+			// trim the title to 100 characters (with words only)
+			if( strlen( $title ) > 100 ) {
 				$title = preg_replace(
-					"/^(.{1,70})(\s.*|$)/s",
+					"/^(.{1,100})(\s.*|$)/s",
 					'\\1 &hellip;',
 					$title );
 			}
 
-			echo "\n" . '<div id="ellak-friendfeed"><a href="'
+			echo "\n" . '<div id="ellak-planet"><a href="'
 				. $url . '" target="_blank">' . $title
 				. '</a></div>';
 		}
 ?>
 
 				<div id="ellak-sites">
-					<a href="http://www.ellak.gr/" title="ΕΕΛ/ΛΑΚ">ΕΕΛ/ΛΑΚ</a>
+					<a href="https://ellak.gr/" title="ΕΕΛ/ΛΑΚ">ΕΕΛ/ΛΑΚ</a>
 					<span class="sep"> | </span>
-					<a href="http://www.creativecommons.gr/" title="creativecommons.gr">creativecommons.gr</a>
+					<a href="http://creativecommons.gr/" title="creativecommons.gr">creativecommons.gr</a>
 					<span class="sep"> | </span>
-					<a href="http://mycontent.ellak.gr/" title="mycontent.ellak.gr">mycontent.ellak.gr</a>
+					<a href="https://mycontent.ellak.gr/" title="mycontent.ellak.gr">mycontent.ellak.gr</a>
 					<span class="sep"> | </span>
 
 					<select onchange="if(this.value) window.location.href=this.value">
@@ -87,7 +87,7 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 						<option value="https://ellak.gr/%CE%B7%CE%BC%CE%AD%CF%81%CE%B5%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">Ημέρες Συνεργασίας</option>
 						<option value="https://advisory.ellak.gr/">Διαβουλεύσεις</option>
 						<option value="https://conferences.ellak.gr/">Εκδηλώσεις</option>
-						<option value="https://ellak.gr/edu">Εκπαίδευση</option>
+						<option value="https://edu.ellak.gr">Εκπαίδευση</option>
 						<option value="https://mathe.ellak.gr">mathe.ΕΛΛΑΚ</option>
 						<option value="https://elearn.ellak.gr/">Εκπαιδευτικό Υλικό</option>
 						<option value="http://openwifi.gr">OpenWifi</option>
