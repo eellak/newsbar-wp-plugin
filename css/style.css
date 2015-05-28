@@ -31,13 +31,13 @@
 
 #ellak-planet {
 	float: left;
-	width: 350px;
+	width: 570px;
 	padding-top: 5px;
 }
 
 #ellak-sites {
 	float: right;
-	width: 570px;
+	width: 350px;
 }
 
 #ellak-sites a {
