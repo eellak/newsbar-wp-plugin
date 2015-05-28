@@ -91,6 +91,7 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 						<option value="https://github.com/eellak">Έργα στο GiHub</option>
 						<option value="http://ebook.ellak.gr">ebook Reader</option>
 						<option value="http://meetings.ellak.gr/">Πλατφόρμα τηλεδιασκέψεων</option>
+						<option value="https://smartcities.ellak.gr/">Smartcities</option>
 					</select>
 				</div><!-- #ellak-sites -->
 			</div><!-- #ellak-newsbar -->
