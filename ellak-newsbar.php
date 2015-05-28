@@ -72,11 +72,6 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 
 				<div id="ellak-sites">
 					<a href="https://ellak.gr/" title="ΕΕΛ/ΛΑΚ">ΕΕΛ/ΛΑΚ</a>
-					<span class="sep"> | </span>
-					<a href="http://creativecommons.gr/" title="creativecommons.gr">creativecommons.gr</a>
-					<span class="sep"> | </span>
-					<a href="https://mycontent.ellak.gr/" title="mycontent.ellak.gr">mycontent.ellak.gr</a>
-					<span class="sep"> | </span>
 
 					<select onchange="if(this.value) window.location.href=this.value">
 						<option value="">Δικτυακοί τόποι</option>
