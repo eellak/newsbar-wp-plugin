@@ -36,7 +36,7 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 		// load wordpress rss functions (SimplePIE)
 		include_once( ABSPATH . WPINC . '/feed.php' );
 
-		// Ellak Friendfeed url
+		// planet ellak feed url
 		$ellak_feed = fetch_feed(
 			'https://planet.ellak.gr/atom.xml' );
 
