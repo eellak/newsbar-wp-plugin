@@ -2,7 +2,7 @@
 	width: 100%;
 	font-family: 'Verdana', 'Arial', sans;
 	font-size: 11px;
-	background: url('img/bg.gif') repeat-x;
+	background: #f58220;
 	padding: 7px 0;
 }
 
@@ -15,7 +15,7 @@
 }
 
 #ellak-newsbar {
-	width: 956px;
+	width: 96%;
 	margin: 0 auto;
 }
 
@@ -29,15 +29,8 @@
 	clear: both;
 }
 
-#ellak-planet {
-	float: left;
-	width: 570px;
-	padding-top: 5px;
-}
-
 #ellak-sites {
-	float: right;
-	width: 350px;
+	float: left;
 }
 
 #ellak-sites a {
@@ -46,8 +39,8 @@
 
 #ellak-sites select {
 	font-size: 11px;
-	border: 1px solid gray;
-	border-radius: 5px;
+	border: none;
+	border-radius: 0;
 	padding: 2px;
 	background: #fff;
 	cursor: default;
@@ -55,4 +48,28 @@
 
 .sep {
 	color: #fff;
+}
+.header-login {
+	float: right;
+	right: 0.5em;
+	margin-top: 0;
+	padding: 0;
+}
+.header-login a{
+	margin-right: 1em;
+	color: #fff;
+	font-weight: bold;
+}
+.header-login a:hover{
+	color: #3a3a3a;
+}
+@media only screen and (max-width: 768px) {
+	#ellak-sites {
+	width: 100%;
+}
+	.header-login {
+	width: 100%;
+	display: block;
+	margin: 12px auto;
+	}
 }

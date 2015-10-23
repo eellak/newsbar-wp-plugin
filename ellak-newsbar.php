@@ -32,66 +32,54 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 ?>
 		<div id="ellak-newsbar-cont">
 			<div id="ellak-newsbar">
-<?php
-		// load wordpress rss functions (SimplePIE)
-		include_once( ABSPATH . WPINC . '/feed.php' );
+		<div class="header-login">
+				<a href="https://mathe.ellak.gr/" title="μάθε ΕΛ/ΛΑΚ" target="_blank">Τι είναι το ΕΛ/ΛΑΚ;</a>
+				<?php if( is_user_logged_in() ): ?>
+				<a href="<?php echo esc_url( 'https://ellak.gr/account' ); ?>"><?php _e( 'Ο λογαριασμός μου', 'gpchild-ellak' ); ?></a>
+				<a href="<?php echo esc_url( wp_logout_url( get_permalink() ) ); ?>"><?php _e( 'Αποσύνδεση', 'gpchild-ellak' ); ?></a>
 
-		// planet ellak feed url
-		$ellak_feed = fetch_feed(
-			'https://planet.ellak.gr/atom.xml' );
+				<?php else:
 
-		if( ! is_wp_error( $ellak_feed ) ) {
-			/* get the items and randomize their order */
-			$rss_items = $ellak_feed->get_items();
-			shuffle( $rss_items );
-		}
+					if( get_option( 'users_can_register' ) ): ?>
+				<a href="<?php echo esc_url( wp_registration_url() ); ?>"><?php _e( 'Εγγραφή', 'gpchild-ellak' ); ?></a>
+				<?php	endif; // get_option ?>
 
-		if( ! empty( $rss_items ) ) {
-			// get the url & the title of the first object..
-			foreach( $rss_items as $rss_item ) {
-				$url = esc_url( $rss_item->get_permalink() );
-				$title = $rss_item->get_title();
+				<a href="<?php echo esc_url( wp_login_url() ); ?>"><?php _e( 'Συνδεση', 'gpchild-ellak' ); ?></a>
 
-				// ..and stop the loop
-				break;
-			}
-
-			// trim the title to 100 characters (with words only)
-			if( strlen( $title ) > 100 ) {
-				$title = preg_replace(
-					"/^(.{1,100})(\s.*|$)/s",
-					'\\1 &hellip;',
-					$title );
-			}
-
-			echo "\n" . '<div id="ellak-planet"><a href="'
-				. $url . '" target="_blank">' . $title
-				. '</a></div>';
-		}
-?>
-
+				<?php endif; // is_user_logged_in ?>
+			</div>
 				<div id="ellak-sites">
 					<a href="https://ellak.gr/" title="ΕΕΛ/ΛΑΚ">ΕΕΛ/ΛΑΚ</a>
+					<span class="sep"> | </span>
+					<a href="http://creativecommons.gr/" title="creativecommons.gr">creativecommons.gr</a>
+					<span class="sep"> | </span>
+					<a href="https://mycontent.ellak.gr/" title="mycontent.ellak.gr">mycontent.ellak.gr</a>
+					<span class="sep"> | </span>
 
 					<select onchange="if(this.value) window.location.href=this.value">
-						<option value="">Δικτυακοί τόποι</option>
-
-						<option value="https://planet.ellak.gr">Πλανήτης ελλ.κοινότητας ΕΛ/ΛΑΚ</option>
-						<option value="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/">Blogs Ομάδων Εργασίας</option>
-						<option value="http://repository.ellak.gr">Αποθετήριο ΕΛ/ΛΑΚ</option>
-						<option value="https://ellak.gr/%CE%B7%CE%BC%CE%AD%CF%81%CE%B5%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">Ημέρες Συνεργασίας</option>
-						<option value="https://advisory.ellak.gr/">Διαβουλεύσεις</option>
-						<option value="https://conferences.ellak.gr/">Εκδηλώσεις</option>
+            <option value="">Δικτυακοί τόποι</option>
+						<option value="https://planet.ellak.gr">Πλανήτης ΕΛ/ΛΑΚ</option>
 						<option value="https://edu.ellak.gr">Εκπαίδευση</option>
 						<option value="https://mathe.ellak.gr">mathe.ΕΛΛΑΚ</option>
-						<option value="https://elearn.ellak.gr/">Εκπαιδευτικό Υλικό</option>
-						<option value="http://openwifi.gr">OpenWifi</option>
-						<option value="https://team.ellak.gr/">Διαχείριση έργων</option>
 						<option value="https://ccradio.ellak.gr">CCRadio</option>
-						<option value="https://github.com/eellak">Έργα στο GiHub</option>
-						<option value="http://ebook.ellak.gr">ebook Reader</option>
-						<option value="http://meetings.ellak.gr/">Πλατφόρμα τηλεδιασκέψεων</option>
-						<option value="https://smartcities.ellak.gr/">Smartcities</option>
+						<option value="https://github.com/eellak">Έργα στο GitHub</option>
+						<option value="http://repository.ellak.gr">Αποθετήριο ΕΛ/ΛΑΚ</option>
+            <option value="https://odi.ellak.gr/">Open Data Institute</option>
+						<option value="https://obs.ellak.gr/">Ανοιχτοί Προϋπολογισμοί</option>
+						<option value="https://eellak.gr">ΕΕΛ/ΛΑΚ</option>
+            <option value="https://gfoss.eu">GFOSS</option>
+						<option value="https://advisory.ellak.gr/">Διαβουλεύσεις</option>
+						<option value="https://legal.ellak.gr/">Νομοθεσία και ανοιχτές τεχνολογίες</option>
+						<option value="https://openwifi.gr">OpenWifi</option>
+            <option value="https://smartcities.ellak.gr">Smartcities</option>
+						<option value="">Ομάδες Εργασίας</option>
+						<option value="https://opensource.ellak.gr">Ανοιχτό Λογισμικό</option>
+						<option value="https://opendata.ellak.gr">Ανοιχτά Δεδομένα</option>
+						<option value="https://opengov.ellak.gr">Ανοιχτή Διακυβέρνηση</option>
+						<option value="https://openhardware.ellak.gr">Ανοιχτό Υλισμικό</option>
+						<option value="https://openstandards.ellak.gr">Ανοιχτα Πρότυπα και Άδειες</option>
+						<option value="https://privacy.ellak.gr">Ασφάλεια και Ιδιωτικότητα</option>
+						<option value="https://oer.ellak.gr">Ανοιχτότητα στην Εκπαίδευση</option>
 					</select>
 				</div><!-- #ellak-sites -->
 			</div><!-- #ellak-newsbar -->
@@ -99,5 +87,4 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 <?php
 	}
 }
-
 ?>
