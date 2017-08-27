@@ -2,7 +2,18 @@
 	width: 100%;
 	font-family: 'Verdana', 'Arial', sans;
 	font-size: 11px;
-	background: url('img/bg.gif') repeat-x;
+	background: #98C807;
+  background-color: #98C807;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear,left top,left bottom,from(#98C807),to(#688527));
+  background-image: -moz-linear-gradient(#98C807,#688527);
+  background-image: -ms-linear-gradient(#98C807,#688527);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#98C807),color-stop(100%,#688527));
+  background-image: -webkit-linear-gradient(#98C807,#688527);
+  background-image: -o-linear-gradient(#98C807,#688527);
+  background-image: linear-gradient(#98C807,#688527);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#98C807',endColorstr='#688527',GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
 	padding: 7px 0;
 }
 
@@ -15,7 +26,7 @@
 }
 
 #ellak-newsbar {
-	width: 956px;
+	width: 96%;
 	margin: 0 auto;
 }
 
@@ -29,15 +40,8 @@
 	clear: both;
 }
 
-#ellak-planet {
-	float: left;
-	width: 350px;
-	padding-top: 5px;
-}
-
 #ellak-sites {
-	float: right;
-	width: 570px;
+	float: left;
 }
 
 #ellak-sites a {
@@ -46,8 +50,8 @@
 
 #ellak-sites select {
 	font-size: 11px;
-	border: 1px solid gray;
-	border-radius: 5px;
+	border: none;
+	border-radius: 0;
 	padding: 2px;
 	background: #fff;
 	cursor: default;
@@ -55,4 +59,9 @@
 
 .sep {
 	color: #fff;
+}
+@media only screen and (max-width: 768px) {
+	#ellak-sites {
+	width: 100%;
+}
 }
