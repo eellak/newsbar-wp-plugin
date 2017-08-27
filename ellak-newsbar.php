@@ -55,6 +55,7 @@ if( ! function_exists( 'ellak_newsbar' ) ) {
 					<a href="https://mycontent.ellak.gr/" title="mycontent.ellak.gr">mycontent.ellak.gr</a>
 					<span class="sep"> | </span>
 
+<<<<<<< HEAD
 <select onchange="if(this.value) window.location.href=this.value">
 						<option value="">Δικτυακοί τόποι</option>
 						<option value="https://mathe.ellak.gr">mathe.ΕΛΛΑΚ</option>
